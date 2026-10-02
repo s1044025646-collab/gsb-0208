@@ -1,0 +1,29 @@
+{
+  "name": "local-pointcloud-ph-backend",
+  "version": "1.0.0",
+  "description": "Windows 本地点云 Vietoris-Rips 持久同调 API 与 CLI",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "pcph": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "dev": "node --experimental-strip-types src/index.ts",
+    "test": "tsc -p tsconfig.json && tsc -p tsconfig.test.json && node --experimental-strip-types --test --test-reporter=spec test/persistence.test.ts",
+    "demo": "powershell -ExecutionPolicy Bypass -File scripts/demo.ps1"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.0",
+    "typescript": "^5.9.0"
+  }
+}
+
+
+
+
+

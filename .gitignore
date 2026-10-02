@@ -1,0 +1,7 @@
+node_modules/
+data/
+dist/
+test/**/*.js
+test/**/*.d.ts
+test/**/*.js.map
+*.log
