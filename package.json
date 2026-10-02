@@ -1,0 +1,22 @@
+{
+  "name": "pointcloud-ph-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Windows 本地点云持久同调与拓扑条形码分析后端（Vietoris-Rips，GF(2) H0/H1）",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node --experimental-strip-types src/server/http.ts",
+    "dev": "node --experimental-strip-types --watch src/server/http.ts",
+    "cli": "node --experimental-strip-types src/cli.ts",
+    "demo": "node --experimental-strip-types scripts/demo.ts",
+    "test": "node --experimental-strip-types --test tests/core.test.ts tests/api.test.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.7.0"
+  }
+}
